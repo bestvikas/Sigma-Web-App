@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include sigmaarocos *.css
+recursive-include sigmaarocos *.csv
+recursive-include sigmaarocos *.html
+recursive-include sigmaarocos *.ico
+recursive-include sigmaarocos *.js
+recursive-include sigmaarocos *.json
+recursive-include sigmaarocos *.md
+recursive-include sigmaarocos *.png
+recursive-include sigmaarocos *.py
+recursive-include sigmaarocos *.svg
+recursive-include sigmaarocos *.txt
+recursive-exclude sigmaarocos *.pyc
