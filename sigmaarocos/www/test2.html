@@ -1,0 +1,429 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact | Sigma AroCos</title>
+	<link type="text/css" rel="stylesheet" href="/../assets/sigmaarocos/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/../assets/sigmaarocos/css/responsive.css" />
+	<link rel="stylesheet" type="text/css" href="/../assets/sigmaarocos/css/bootstrap.css" />
+	<link rel="stylesheet" href="/../assets/sigmaarocos/css/inner-page-style.css" type="text/css" />
+ 
+	<!-- Libraries CSS Files -->
+	<link href="/../assets/sigmaarocos/css/font-awesome.css" rel="stylesheet">
+	<link href="/../assets/sigmaarocos/css/flaticon.css" rel="stylesheet">
+ 
+	<!-----navbar----css-------->
+	<link rel="stylesheet" type="text/css" href="/../assets/sigmaarocos/css/navbar.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+	   integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+ 
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/../assets/sigmaarocos/image/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/../assets/sigmaarocos/image/favicon.ico" type="image/x-icon">
+ 
+ 
+	<!------------------------------------owl------------------------->
+	<link type="text/css" rel="stylesheet" href="/../assets/sigmaarocos/owl/assets/owl.carousel.min.css">
+	<link type="text/css" rel="stylesheet" href="/../assets/sigmaarocos/owl/assets/owl.theme.default.min.css" />
+	<!------------------------------------owl----------------->
+	<style>
+	   .google-maps {
+		  position: relative;
+		  padding-bottom: 75%;
+		  height: 0;
+		  overflow: hidden;
+	   }
+ 
+	   .google-maps iframe {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100% !important;
+		  height: 80% !important;
+	   }
+	</style>
+ </head>
+
+<body>
+	<!-- Navbar Start -->
+	<!-- <div id="navbar"></div> -->
+	<!-- Navbar End -->
+
+
+	<!-- Page Header Start -->
+	<!-- <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+		<div class="container">
+			<h1 class="display-3 mb-4 animated slideInDown">Contact</h1>
+			<nav aria-label="breadcrumb animated slideInDown">
+				<ol class="breadcrumb mb-0">
+					<li class="breadcrumb-item"><a href="home.html">Home</a></li>
+					<li class="breadcrumb-item"><a href="#">Pages</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Contact</li>
+				</ol>
+			</nav>
+		</div>
+	</div> -->
+	<!-- Page Header End -->
+	{% extends "templates/web.html" %}
+
+	{% set title = heading or "Contact Us" %}
+	{% block header %}<h1>{{ heading or "Contact Us" }}</h1>{% endblock %}
+
+	{% block page_content %}
+	<style>
+		.address {
+			line-height: 1.7em;
+		}
+	</style>
+	<div class="contact-content">
+
+	</div>
+
+
+	
+	<!-- Contact End -->
+
+	<!-- Contact Start -->
+	<div class="container-xxl py-5">
+		<div class="container">
+			<div class="row g-5">
+				<div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+					<p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Contact</p>
+					<h1 class="display-5 mb-4">If You Have Any Query, Please Contact Us</h1>
+
+					<!-- <form> -->
+					<div class="row g-3">
+						<p id="contact-alert" class="alert alert-warning" style="display: none;">&nbsp;</p>
+						<div class="col-md-6">
+							<div class="form-floating">
+								<input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+								<label for="name">Your Name</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-floating">
+								<input type="text" class="form-control" name="company" id="compnay"
+									placeholder="Your Company Name">
+								<label for="company">Your Company Name</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-floating">
+								<input type="text" class="form-control" name="position" id="position"
+									placeholder="Position">
+								<label for="position">Position</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-floating">
+								<input type="text" class="form-control" name="contact" id="contact"
+									placeholder="Contact">
+								<label for="contact">Contact</label>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-floating">
+								<input type="email" class="form-control" name="email" id="email"
+									placeholder="Your Email">
+								<label for="email">Your Email</label>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-floating">
+								<input type="text" class="form-control" name="country" id="country"
+									placeholder="Your Country">
+								<label for="country">Your Country</label>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-floating">
+								<select name="industry" class="form-control" onchange='CheckIndustry(this.value);'>
+									{% if query_options -%}
+									{% for option in query_options.split("\n") -%}
+									<option value="{{ option }}">{{ option }}</option>
+									{%- endfor %}
+									{% else %}
+									<option value="Select Industry">Select Industry</option>
+									<option value="Automation">Automation</option>
+									<option value="Pharmaceticule">Pharmaceticule</option>
+									<option value="Biological">Biological</option>
+									<option value="Clinical Trials">Clinical Trials</option>
+									<option value="Logistics">Logistics</option>
+									<option value="Food/Fruits/Vegetable">Food/Fruits/Vegetable</option>
+									<option value="Horticulture">Horticulture</option>
+									<option value="Chemical">Chemical</option>
+									<option value="Others">Others</option>
+									{% endif %}
+								</select><br>
+								<input class="form-control" type="text" name="Others" id="Others" style='display:none;'
+									placeholder="{{ _('Your Industry') }}" />
+							</div>
+						</div>
+						<!-- <div class="col-md-6">
+								<div class="form-floating">
+									<select class="form-select">
+										<option selected>Send to</option>
+										<option value="1">One</option>
+										<option value="2">Two</option>
+										<option value="3">Three</option>
+									  </select>
+								</div>
+							</div> -->
+						<div class="col-12">
+							<div class="form-floating">
+								<textarea class="form-control" placeholder="Leave a message here" name="message"
+									id="message" style="height: 100px"></textarea>
+								<label for="message">Message</label>
+							</div>
+						</div>
+						<!-- <div class="col-md-12">
+								
+									<div class="captcha-area">
+										<table>
+											<tr>
+												<td>
+													<div class="captcha-img">
+														<img src="/assets/frappe/img/captcha-bg.png" alt="Captch Background">
+														<span class="captcha"></span>
+													</div>
+												</td>
+												<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+												<td><button class="reload-button"><i class="fas fa-redo-alt"></i></button></td>
+											</tr>
+										</table>
+									</div>
+								
+							</div> 
+							<div class="col-md-12">
+								<div class="form-floating">
+									<table>
+										<tr>
+										  <td><form action="#" class="input-area">
+											  <input type="text" class="form-control" placeholder="Enter captcha" maxlength="6" spellcheck="false" required>
+										  </td>
+										  <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+										  <td><button class="check-btn" style="background-color: #355EFC;
+											  border-color: #355EFC;
+				 							  color: white;width: 80px;
+											  height: 40px;">Check</button>
+										  </form></td>
+										</tr>
+										<tr><div class="status-text"></div></tr>
+									</table>
+								</div>
+							</div> -->
+						<div class="col-12">
+							<button class="btn btn-primary btn-send">{{ _("Send") }}</button>
+							
+						</div>
+					</div>
+					<!-- </form> -->
+				</div>
+				<div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px; min-width: 330px;">
+					<div class="position-relative rounded overflow-hidden h-100">
+						<iframe class="position-relative w-100 h-100"
+						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3818.5584326072913!2d74.6338472!3d16.8482481!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc123fd41e55839%3A0xced9e477a6370714!2sSigma%20Industries!5e0!3m2!1sen!2sin!4v1711082700430!5m2!1sen!2sin"
+							width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade">"
+							frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+							tabindex="0"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Contact End -->
+	</div>
+
+	<div class="contact-outer">
+		<div class="container">
+		   <div class="row">
+			  <div class="col-lg-12">
+				 <div class="contact-address">
+					<div class="heading">
+					   <h2>Contact <span>Our Office</span></h2>
+					   <p>If you have any query for related Consulting… We are available</p>
+					</div>
+					<div class="location-inner">
+
+					   <div class="row">
+						  <div class="top-col-1 ">
+							 <div id="washroomtypeselect1">
+								<div class="col-lg-9 col-md-9 col-sm-9 col-sm-12">
+								   <div class="input-group" style="border:none;">
+									  <h2>Sangli</h2>
+									  <p>Sigma AroCos <br>
+										 Sigma Industries <br>
+										 B-7/28, M.I.D.C Miraj, Tal-Miraj, Dist.- Sangli <br>
+										 Maharashtra INDIA, <br>
+										 Pin-416410 </p>
+								   </div>
+								</div>
+
+							 </div>
+
+
+						  </div>
+					   </div>
+					</div>
+					<div class="troll-free">
+					   <ul>
+						  <li><span>Contact us&nbsp;:</span>&nbsp;+91 9422618051</li>
+						  <li><span> Mail us at&nbsp;:</span> &nbsp;response@sigmaarocos.com</li>
+					   </ul>
+					</div>
+				 </div>
+				 <div class="contact-form">
+					<div class="heading">
+					   <h2>Send <span>Message Us</span></h2>
+					</div>
+					<div class="form">
+					   <form method="post" action="sendemail.php" id="contact-form"
+						  onSubmit=" location.href = 'success.html' + document.getElementById('username').value; return false;">
+						  <div class="row">
+							 <div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="form-group">
+								   <input type="text" name="name" class="form-control" placeholder="Name*" required
+									  data-error="NEW ERROR MESSAGE">
+								</div>
+							 </div>
+							 <div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="form-group">
+								   <input type="text" name="phone" class="form-control" placeholder="Phone*"
+									  required>
+								</div>
+							 </div>
+							 <div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="form-group">
+								   <input type="email" name="email" class="form-control" placeholder="Email*"
+									  required>
+								</div>
+							 </div>
+							 <div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="form-group in-sec">
+								   <select name="dropdown" class="form-control select" required>
+									  <option value="pre" aria-placeholder="">Choose Product*</option>
+									  <option value="isoamyl-alcohol">Isoamyl Alcohol</option>
+									  <option value="lo">SSC-100</option>
+
+								   </select>
+								</div>
+							 </div>
+							 <div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="form-group in-sec">
+								   <select name="dropdown1" id="dropdown1" class="form-control select"
+									  onchange='checkQuantity()' required>
+									  <option id="quantity" value="quantity" aria-placeholder="">Please Select
+										 Quantity</option>
+									  <option id="trial_purpose" value="trial_purpose">Trial Purpose</option>
+									  <option id="enter_quantity" value="enter_quantity">Enter Quantity</option>
+								   </select>
+								</div>
+							 </div>
+							 <div class="col-md-12 col-sm-12 col-xs-12" id="extra" name="extra"
+								style="display: none">
+								<div class="form-group">
+								   <input type="put_quantity" name="put_quantity" class="form-control"
+									  placeholder="Please enter quantity here*" required>
+								</div>
+							 </div>
+
+							 <div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="form-group">
+								   <textarea name="message" class="form-control mes" rows="2"
+									  placeholder="Message..." required></textarea>
+								</div>
+							 </div>
+						  </div>
+						  <div class="row">
+							 <div class="col-xs-12">
+								<div class="form-group">
+								   <!-- <button type="submit" class="btn btn-default ">Submit</button> -->
+								   <button class="btn btn-primary btn-send">{{ _("SUBMIT") }}</button>
+								</div>
+							 </div>
+						  </div>
+					   </form>
+					</div>
+				 </div>
+			  </div>
+		   </div>
+		</div>
+	 </div>
+
+	  <!--Map Section-->
+	  <section class="map-section contact">
+		<div class="container">
+		   <!--Map Outer-->
+		   <div class="map-outer">
+			  <div class="map-outer">
+				 <div class="google-maps">
+					<iframe
+					   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3818.5584326072913!2d74.6338472!3d16.8482481!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc123fd41e55839%3A0xced9e477a6370714!2sSigma%20Industries!5e0!3m2!1sen!2sin!4v1711082700430!5m2!1sen!2sin"
+					   width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					   referrerpolicy="no-referrer-when-downgrade">
+					</iframe>
+				 </div>
+
+
+			  </div>
+		   </div>
+		</div>
+	 </section>
+	 <!--End Map Section-->
+
+</body>
+<script>
+	{% include "templates/includes/contact.js" %}
+</script>
+<script type="text/javascript">
+	function CheckIndustry(val) {
+		var element = document.getElementById('Others');
+		if (val == 'Select Industry' || val == 'Others')
+			element.style.display = 'block';
+		else
+			element.style.display = 'none';
+	}
+</script>
+<!-- <script src="/assets/frappe/js/capcha.js"></script> -->
+<!-- <script src="/assets/frappe/js/selectCountry.js"></script>  -->
+<!-- <script src="/assets/frappe/js/countries.js"></script>  -->
+
+<!-- <script>
+	function myFunction() {
+	  alert("Page is loaded");
+	  debugger
+      		// var myurl= 'http://'+window.location.host+'/api/resource/Country';
+			var myurl='https://restcountries.com/v3.1/all';
+		//  var myurl= 'https://www.geonames.org/api/country';
+        $.ajax({
+                type: 'GET', 
+                url: myurl,
+                success: function(result) {
+                debugger
+                        var options = [];
+                        for (var i = 0; i < result.data.length; i++) {
+								$('#country').append($('<option>',
+								{
+									value: result.data[i].name,
+									text : result.data[i].name
+								}));
+                        }
+                }
+        });
+	}
+</script> -->
+<!-- 
+<script>
+	function getCountry(auth_token) {
+    $.ajax({
+        type: 'get', 
+        url: 'https://www.geonames.org/api/country',
+        success: function(data){
+            data.forEach(element => {
+                $('#country').append('<option>'+element.country+'</option>');
+            });
+        }
+    })
+}
+</script> -->
+{% endblock %}

@@ -1,0 +1,277 @@
+.clearfix-blog:before,
+.clearfix-blog:after,
+.dl-horizontal dd:before,
+.dl-horizontal dd:after,
+.container-blog:before,
+.container-blog:after,
+.container-blog-fluid:before,
+.container-blog-fluid:after,
+.row-blog:before,
+.row-blog:after,
+.form-horizontal .form-group:before,
+.form-horizontal .form-group:after,
+.btn-toolbar:before,
+.btn-toolbar:after,
+.btn-group-vertical>.btn-group:before,
+.btn-group-vertical>.btn-group:after,
+.nav:before,
+.nav:after,
+.navbar:before,
+.navbar:after,
+.navbar-header:before,
+.navbar-header:after,
+.navbar-collapse:before,
+.navbar-collapse:after,
+.pager:before,
+.pager:after,
+.panel-body:before,
+.panel-body:after,
+.modal-header:before,
+.modal-header:after,
+.modal-footer:before,
+.modal-footer:after {
+  display: table;
+  content: " ";
+}
+
+.container-blog {
+  padding: 0px;
+}
+
+.container-blog {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container-blog {
+    width: 750px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container-blog {
+    padding: 0px 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-blog {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-blog {
+    width: 1170px;
+  }
+}
+
+.container-blog-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row-blog {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@media (min-width: 992px) {
+  .col-md-2 {
+    width: 16.66666667% !important;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .col-md-1,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12 {
+    float: left !important;
+  }
+}
+
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  position: relative !important;
+  min-height: 1px !important;
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+}
+
+@media (min-width: 992px) {
+  .col-md-12 {
+    width: 100% !important;
+  }
+}
+
+.navbar-toggle-blog {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+@media (min-width: 992px) {
+  .navbar-toggle-blog {
+    display: none;
+  }
+}
+
+.navbar-toggle-blog {
+  margin-right: 0px;
+}
+
+.nav {
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+  list-style: none !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+
+.clearfix-blog:after,
+.dl-horizontal dd:after,
+.container-blog:after,
+.container-blog-fluid:after,
+.row-blog:after,
+.form-horizontal .form-group:after,
+.btn-toolbar:after,
+.btn-group-vertical>.btn-group:after,
+.nav:after,
+.navbar:after,
+.navbar-header:after,
+.navbar-collapse:after,
+.pager:after,
+.panel-body:after,
+.modal-header:after,
+.modal-footer:after {
+  clear: both;
+}
+
+ul,
+ol {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+
+.img {
+  vertical-align: middle !important;
+}
+
+
+.navbar-toggle-blog:focus {
+  outline: 0;
+}
+
+.navbar-toggle-blog .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.navbar-toggle-blog .icon-bar+.icon-bar {
+  margin-top: 4px;
+}
+
+@media (min-width: 1024px) {
+  .navbar-toggle-blog {
+    display: none;
+  }
+}
+
+/* menu mobile fix */
+@media (max-width: 992px) {
+  .site-logo {
+    width: 50%;
+    float: left;
+  }
+
+  .site-menu {
+    width: 50%;
+    float: right
+  }
+
+  img.show-logo {
+    position: unset;
+    max-width: unset;
+    height: unset;
+  }
+}
