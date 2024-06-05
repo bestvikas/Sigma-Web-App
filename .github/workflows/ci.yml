@@ -78,7 +78,7 @@ jobs:
           bench new-site --db-root-password root --admin-password admin test_site
           bench --site test_site install-app sigmaarocos
           bench build
-        env:
+        env:master
           CI: 'Yes'
 
       - name: Run Tests
